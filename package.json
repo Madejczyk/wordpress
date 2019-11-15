@@ -1,0 +1,30 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jakub Madejczyk",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run eslint && webpack",
+    "eslint": "./node_modules/.bin/eslint --ext .jsx,.js src/",
+    "prettier-watch": "onchange 'src/' -- prettier --write {{changed}}",
+    "start": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.2",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0",
+    "babel-loader": "8.0.6",
+    "eslint": "6.6.0",
+    "eslint-plugin-react": "7.16.0",
+    "prettier": "1.19.1",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0"
+  },
+  "dependencies": {
+    "onchange": "^6.1.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  }
+}
