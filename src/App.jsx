@@ -1,10 +1,11 @@
 import React from "react";
+import "./App.scss";
 
 const App = () => (
-  <h1>
+  <div className="app">
     Hello, world!Hello, world!Hello, world!Hello, world!Hello, world!Hello,
     world!Hello, world!Hello, world!Hello, world!Hello, world!
-  </h1>
+  </div>
 );
 
 export default App;
