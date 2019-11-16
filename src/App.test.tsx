@@ -1,3 +1,3 @@
 test("this test should be removed", () => {
-    expect(true).toBe(true)
-})
+    expect(true).toBe(true);
+});

@@ -48,6 +48,14 @@ jobs:
       - *run_yarn
       - run: yarn test
 
+  test-e2e:
+    docker: *docker
+    steps:
+      - checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - run: yarn test-e2e
+
   build:
     docker: *docker
     steps:
@@ -76,10 +84,14 @@ workflows:
       - test:
           requires:
             - setup
+      - test:
+          requires:
+            - setup
       - build:
           requires:
             - lint
             - test
+            - test-e2e
       - deploy:
           requires:
             - build
