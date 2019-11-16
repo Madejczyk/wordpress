@@ -1,7 +1,12 @@
 env:
   browser: true
   es6: true
-extends: 'eslint:recommended'
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+settings:
+  react:
+    version: "detect"
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
@@ -15,13 +20,13 @@ plugins:
 rules:
   indent:
     - error
-    - 4
+    - 2
   linebreak-style:
     - error
     - unix
   quotes:
     - error
-    - single
+    - double
   semi:
     - error
     - always

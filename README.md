@@ -1,1 +1,1 @@
-# [Starter]
+# [Starter] [![CircleCI](https://circleci.com/gh/Madejczyk/starter/tree/master.svg?style=svg)](https://circleci.com/gh/Madejczyk/starter/tree/master)
