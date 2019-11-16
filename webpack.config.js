@@ -1,36 +1,37 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: "./src/index.tsx",
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', "@babel/preset-react"]
-          }
-        }
+        test: /\.tsx?$/,
+        loader: "ts-loader"
+      },{
+          enforce: "pre",
+          test: /\.js$/,
+          loader: "source-map-loader"
       },{
         test: /\.scss$/,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          "style-loader",
           // Translates CSS into CommonJS
-          'css-loader',
+          "css-loader",
           // Compiles Sass to CSS
-          'sass-loader',
+          "sass-loader",
         ],
       },
     ]

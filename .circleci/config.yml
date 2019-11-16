@@ -38,7 +38,7 @@ jobs:
       - checkout
       - *restore_yarn_cache
       - *run_yarn
-      - run: yarn eslint
+      - run: yarn tslint
   
   build:
     docker: *docker
