@@ -39,7 +39,15 @@ jobs:
       - *restore_yarn_cache
       - *run_yarn
       - run: yarn tslint
-  
+
+  test:
+    docker: *docker
+    steps:
+      - checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - run: yarn test
+
   build:
     docker: *docker
     steps:
@@ -65,9 +73,13 @@ workflows:
       - lint:
           requires:
             - setup
+      - test:
+          requires:
+            - setup
       - build:
           requires:
             - lint
+            - test
       - deploy:
           requires:
             - build
