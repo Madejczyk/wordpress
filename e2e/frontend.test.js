@@ -4,7 +4,7 @@ beforeAll(async () => {
   await page.goto(URL, { waitUntil: "domcontentloaded" });
 });
 
-describe("Test header and title of the page", () => {
+describe("Test title and content of the page", () => {
   test(
     "Title of the page",
     async () => {
@@ -15,7 +15,7 @@ describe("Test header and title of the page", () => {
   );
 
   test(
-    "Header of the page",
+    "Content of the page",
     async () => {
       const appHandle = await page.$(".app");
       const html = await page.evaluate(
