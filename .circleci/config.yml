@@ -2,7 +2,7 @@ version: 2.1
 
 aliases:
   - &docker
-    - image: circleci/node:erbium
+    - image: circleci/node:latest-browsers
 
   - &restore_yarn_cache
     restore_cache:
