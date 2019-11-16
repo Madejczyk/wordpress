@@ -37,7 +37,9 @@
   },
   "dependencies": {
     "express": "4.17.1",
+    "jest-puppeteer": "4.3.0",
     "onchange": "6.1.0",
+    "puppeteer": "2.0.0",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   }
