@@ -84,7 +84,7 @@ workflows:
       - test:
           requires:
             - setup
-      - test:
+      - test-e2e:
           requires:
             - setup
       - build:
