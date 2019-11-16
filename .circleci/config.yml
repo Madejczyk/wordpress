@@ -38,7 +38,15 @@ jobs:
       - checkout
       - *restore_yarn_cache
       - *run_yarn
-      - run: yarn run eslint
+      - run: yarn eslint
+  
+  build:
+    docker: *docker
+    steps:
+      - checkout
+      - *restore_yarn_cache
+      - *run_yarn
+      - run: yarn build
 
 workflows:
   stable:
@@ -47,3 +55,6 @@ workflows:
       - lint:
           requires:
             - setup
+      - build:
+          requires:
+            - lint

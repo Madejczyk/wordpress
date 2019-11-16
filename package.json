@@ -5,7 +5,7 @@
   "author": "Jakub Madejczyk",
   "license": "MIT",
   "scripts": {
-    "build": "yarn run eslint && webpack",
+    "build": "webpack",
     "eslint": "./node_modules/.bin/eslint --ext .jsx,.js src/",
     "prettier-watch": "onchange 'src/' -- prettier --write {{changed}}",
     "start": "webpack-dev-server"
