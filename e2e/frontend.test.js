@@ -1,7 +1,7 @@
 const timeout = process.env.SLOWMO ? 30000 : 10000;
 
 beforeAll(async () => {
-  await page.goto(URL, { waitUntil: "domcontentloaded" });
+  await page.goto("localhost:4444", { waitUntil: "domcontentloaded" });
 });
 
 describe("Test header and title of the page", () => {
