@@ -9,7 +9,7 @@ describe("Test title and content of the page", () => {
     "Title of the page",
     async () => {
       const title = await page.title();
-      expect(title).toBe("Starter");
+      expect(title).toBe("ReactPress");
     },
     timeout
   );
