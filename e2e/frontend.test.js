@@ -13,18 +13,4 @@ describe("Test title and content of the page", () => {
     },
     timeout
   );
-
-  test(
-    "Content of the page",
-    async () => {
-      const appHandle = await page.$(".app");
-      const html = await page.evaluate(
-        appHandle => appHandle.innerHTML,
-        appHandle
-      );
-
-      expect(html).toBe("Hello, world!");
-    },
-    timeout
-  );
 });
