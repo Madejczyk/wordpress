@@ -3,10 +3,33 @@ body,
 #root,
 .app {
   height: 100%;
+  margin: 0;
 }
 
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(#b93156, #1a1945);
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  #circle {
+    fill:none;
+    stroke: rgba($color: white, $alpha: 0.10);
+  }
+
+  #small-circle {
+    fill: white
+  }
 }
