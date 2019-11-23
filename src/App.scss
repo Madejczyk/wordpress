@@ -14,22 +14,29 @@ body,
 
   .menu {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0.5rem;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: fit-content(10%) auto;
 
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    label {
+      font-size: xx-large;
+      color: white;
+    }
+
+    input {
+      margin-right: 0.5rem;
     }
   }
 
   #circle {
-    fill:none;
-    stroke: rgba($color: white, $alpha: 0.10);
+    fill: none;
+    stroke: rgba($color: white, $alpha: 0.1);
   }
 
   #small-circle {
-    fill: white
+    fill: white;
   }
 }

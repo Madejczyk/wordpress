@@ -1,14 +1,12 @@
 import * as React from "react";
-import {useWindowSize } from "./Hooks/useWindowSize";
 
 interface ILoadingProps {
-    customSize: number;
+    size: number;
     roundDuration: number;
+    onClick: () => void;
 }
 
-export const Loading: React.SFC<ILoadingProps> = ({ customSize, roundDuration }) => {
-    const {width, height} = useWindowSize();
-    const size = Math.min(width, height, customSize);
+export const Loading: React.SFC<ILoadingProps> = ({ size, roundDuration, onClick }) => {
     const halfSize = size / 2;
     const radius = halfSize * (4 / 5);
     const stroke = radius / 4;
@@ -16,6 +14,7 @@ export const Loading: React.SFC<ILoadingProps> = ({ customSize, roundDuration })
 
     return (
         <svg
+            onClick={onClick}
             height={size}
             version="1.1"
             width={size}
