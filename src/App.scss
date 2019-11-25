@@ -15,7 +15,7 @@ body,
   .menu {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: calc(100% - 1rem);
     margin: 0.5rem;
     display: grid;
     grid-gap: 0.5rem;
